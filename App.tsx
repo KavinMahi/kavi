@@ -1,13 +1,13 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import MyWork from './components/MyWork';
 import Stats from './components/Stats';
 import About from './components/About';
-import AIAssistant from './components/AIAssistant';
+import Skills from './components/Skills';
 import Contact from './components/Contact';
+import AIAssistant from './components/AIAssistant';
 
 const App: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -25,9 +25,9 @@ const App: React.FC = () => {
       <main>
         <Hero onCtaClick={() => setIsChatOpen(true)} />
         <Stats />
-        <Services />
-        <MyWork />
         <About />
+        <Skills />
+        <MyWork />
         <Contact />
       </main>
 

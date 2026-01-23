@@ -24,7 +24,7 @@ export const getFinancialAdvice = async (userMessage: string) => {
       },
     });
 
-    return response.text || "I'm sorry, I couldn't process that request at the moment. Please try again or reach out to Kavinkumar directly via the contact form.";
+    return response.text || "I'm sorry, I couldn't process that request at the moment. Please try again or reach out to Kavinkumar directly via LinkedIn or GitHub.";
   } catch (error) {
     console.error("Gemini API Error:", error);
     return "The terminal is currently busy. Please try again in a few moments or contact Kavinkumar via LinkedIn.";

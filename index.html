@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kavin Kumar | Senior Full Stack Engineer</title>
+  <title>Kavinkumar V | Full-Stack Web Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,10 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
+    }
+    /* Offset for fixed navbar */
+    section[id], div[id] {
+      scroll-margin-top: 100px;
     }
     .glass-effect {
       background: rgba(255, 255, 255, 0.03);
@@ -31,7 +34,6 @@
     .glow-hover:hover {
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
     }
-    /* Custom Scrollbar for the horizontal scroll section */
     .hide-scrollbar::-webkit-scrollbar {
       display: none;
     }

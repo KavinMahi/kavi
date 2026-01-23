@@ -7,7 +7,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
-    <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 px-6 overflow-hidden">
+    <section id="home" className="relative pt-32 md:pt-40 pb-16 md:pb-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-white/10 mb-6 md:mb-8">
@@ -35,15 +35,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             >
               View Projects
             </a>
-            <a 
-              href="#contact" 
-              className="px-8 py-4 rounded-xl glass-effect text-white font-bold text-lg hover:bg-white/10 transition-colors inline-block text-center"
-            >
-              Contact Me
-            </a>
           </div>
-
-          
         </div>
 
         <div className="relative mt-8 lg:mt-0">
@@ -55,7 +47,6 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
-            
           </div>
         </div>
       </div>

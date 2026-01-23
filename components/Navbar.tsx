@@ -11,23 +11,69 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = !isMenuOpen ? 'hidden' : 'auto';
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      closeMenu();
+      const offset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled || isMenuOpen ? 'py-4 glass-effect' : 'py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold tracking-tighter text-white z-[110]">
+          <a 
+            href="#home" 
+            onClick={(e) => handleLinkClick(e, 'home')} 
+            className="text-2xl font-bold tracking-tighter text-white z-[110]"
+          >
             KAVINKUMAR<span className="text-blue-500">.V</span>
           </a>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10">
-            <a href="#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
-            <a href="#services" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Expertise</a>
-            <a href="#work" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Work</a>
-            <a href="#contact" className="px-6 py-2.5 rounded-full glass-effect text-sm font-semibold hover:bg-white hover:text-black transition-all">
-              Get in Touch
+            <a 
+              href="#about" 
+              onClick={(e) => handleLinkClick(e, 'about')}
+              className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >
+              About
+            </a>
+            <a 
+              href="#skills" 
+              onClick={(e) => handleLinkClick(e, 'skills')}
+              className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >
+              Skills
+            </a>
+            <a 
+              href="#work" 
+              onClick={(e) => handleLinkClick(e, 'work')}
+              className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >
+              Work
             </a>
           </div>
 
@@ -51,34 +97,34 @@ const Navbar: React.FC = () => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-[90] bg-[#0a0a0a]/95 backdrop-blur-xl transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-8 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`fixed inset-0 z-[90] bg-[#0a0a0a]/98 backdrop-blur-2xl transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-8 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
+        <a 
+          href="#home" 
+          onClick={(e) => handleLinkClick(e, 'home')}
+          className="text-3xl font-bold text-white hover:text-blue-500 transition-colors"
+        >
+          Home
+        </a>
         <a 
           href="#about" 
-          onClick={() => setIsMenuOpen(false)}
+          onClick={(e) => handleLinkClick(e, 'about')}
           className="text-3xl font-bold text-white hover:text-blue-500 transition-colors"
         >
           About
         </a>
         <a 
-          href="#services" 
-          onClick={() => setIsMenuOpen(false)}
+          href="#skills" 
+          onClick={(e) => handleLinkClick(e, 'skills')}
           className="text-3xl font-bold text-white hover:text-blue-500 transition-colors"
         >
-          Expertise
+          Skills
         </a>
         <a 
           href="#work" 
-          onClick={() => setIsMenuOpen(false)}
+          onClick={(e) => handleLinkClick(e, 'work')}
           className="text-3xl font-bold text-white hover:text-blue-500 transition-colors"
         >
           Work
-        </a>
-        <a 
-          href="#contact" 
-          onClick={() => setIsMenuOpen(false)}
-          className="mt-4 px-10 py-4 rounded-full accent-gradient text-xl font-bold text-white shadow-xl shadow-blue-500/20"
-        >
-          Get in Touch
         </a>
       </div>
     </>
