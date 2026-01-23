@@ -6,11 +6,12 @@ const About: React.FC = () => {
     <section id="about" className="py-16 md:py-24 px-6 bg-white/[0.02]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="order-2 lg:order-1 flex justify-center">
-          <div className="relative inline-block w-full max-w-md">
+          <div className="relative inline-block w-full max-w-md group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-teal-500/20 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
              <img 
-              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop" 
-              alt="Kavin Kumar Portrait"
-              className="rounded-[2rem] md:rounded-[3rem] w-full aspect-square object-cover grayscale"
+              src="profile.png" 
+              alt="Kavin Kumar Avatar"
+              className="relative rounded-[2rem] md:rounded-[3rem] w-full aspect-square object-contain bg-gradient-to-b from-white/5 to-transparent border border-white/10 transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
         </div>

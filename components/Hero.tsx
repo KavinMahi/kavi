@@ -6,8 +6,29 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
+  const handleScrollToWork = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('work');
+    if (element) {
+      const offset = 100; // Account for the fixed navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="home" className="relative pt-32 md:pt-40 pb-16 md:pb-24 px-6 overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 -z-10 w-full h-full opacity-20 pointer-events-none">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/30 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-amber-500/10 blur-[100px] rounded-full"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-white/10 mb-6 md:mb-8">
@@ -31,22 +52,31 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a 
               href="#work"
-              className="px-8 py-4 rounded-xl accent-gradient text-white font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-blue-500/25 inline-block text-center"
+              onClick={handleScrollToWork}
+              className="px-8 py-4 rounded-xl accent-gradient text-white font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-blue-500/25 inline-block text-center glow-hover"
             >
               View Projects
             </a>
+            <button 
+              onClick={onCtaClick}
+              className="px-8 py-4 rounded-xl glass-effect border border-white/10 text-white font-bold text-lg hover:bg-white/10 transition-all text-center"
+            >
+              Consult AI Assistant
+            </button>
           </div>
         </div>
 
-        <div className="relative mt-8 lg:mt-0">
-          <div className="absolute inset-0 bg-blue-500/10 rounded-3xl blur-3xl transform -rotate-6"></div>
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-effect border border-white/10 group">
+        <div className="relative mt-8 lg:mt-0 flex justify-center lg:justify-end">
+          <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl transform scale-75 animate-pulse"></div>
+          <div className="relative w-full max-w-[500px] aspect-square animate-float">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
-              alt="Kavinkumar V"
-              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              src="profile.png" 
+              alt="Kavinkumar V Avatar"
+              className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
+            {/* Ambient light effects around the avatar */}
+            <div className="absolute top-1/4 -right-10 w-32 h-32 bg-amber-500/20 blur-3xl rounded-full"></div>
+            <div className="absolute bottom-1/4 -left-10 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full"></div>
           </div>
         </div>
       </div>

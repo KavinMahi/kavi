@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { getFinancialAdvice } from '../services/geminiService';
+import { getAssistantResponse } from '../services/geminiService';
 import { Message } from '../types';
 
 interface AIAssistantProps {
@@ -30,7 +30,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
 
-    const aiResponse = await getFinancialAdvice(userMessage);
+    const aiResponse = await getAssistantResponse(userMessage);
     setMessages(prev => [...prev, { role: 'assistant', content: aiResponse }]);
     setIsLoading(false);
   };

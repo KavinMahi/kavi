@@ -1,8 +1,6 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
 const SYSTEM_INSTRUCTION = `
 You are the AI Tech Consultant for Kavinkumar V, a professional Full-Stack Web Developer. 
 Your goal is to provide high-level technical insights while encouraging potential partners or employers to reach out to Kavinkumar.
@@ -12,7 +10,8 @@ Always maintain a helpful yet sophisticated tech-forward tone.
 If asked about services, mention Frontend Engineering, Backend Systems, and Modern UI Frameworks.
 `;
 
-export const getFinancialAdvice = async (userMessage: string) => {
+export const getAssistantResponse = async (userMessage: string) => {
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',

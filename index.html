@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kavinkumar V | Full-Stack Web Developer</title>
+  <link rel="icon" type="image/png" href="profile.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,14 @@
     }
     .glow-hover:hover {
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
     }
     .hide-scrollbar::-webkit-scrollbar {
       display: none;
