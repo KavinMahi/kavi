@@ -3,39 +3,36 @@ import React, { useRef } from 'react';
 
 const projects = [
   {
-    title: "AI-Powered SaaS Analytics",
-    category: "Full Stack Development",
-    description: "Built a real-time analytics dashboard for marketing teams, featuring predictive modeling using Gemini API and a responsive React frontend.",
-    image: "https://images.unsplash.com/photo-1551288049-bbbda546697a?q=80&w=2070&auto=format&fit=crop",
-    result: "Next.js, FastAPI, PostgreSQL"
-  },
-  {
     title: "Decentralized Exchange Interface",
     category: "Web3 / Frontend",
     description: "Developed a high-frequency trading UI with sub-100ms updates, optimized for Web3 wallet interactions and complex data visualizations.",
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2032&auto=format&fit=crop",
-    result: "React, Ethers.js, Tailwind"
+    result: "React, Ethers.js, Tailwind",
+    url: "https://github.com"
   },
   {
     title: "E-commerce Engine (Headless)",
     category: "Backend Architecture",
     description: "Designed a globally distributed commerce engine supporting 50k+ requests per second during peak sales events.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2032&auto=format&fit=crop",
-    result: "Go, Redis, AWS Lambda"
+    result: "Go, Redis, AWS Lambda",
+    url: "https://github.com"
   },
   {
     title: "Collaborative Design Tool",
     category: "Frontend Engineering",
     description: "Implemented a multi-user canvas using CRDTs for real-time state synchronization, enabling seamless remote collaboration.",
     image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop",
-    result: "Canvas API, WebSockets, Node"
+    result: "Canvas API, WebSockets, Node",
+    url: "https://github.com"
   },
   {
     title: "Enterprise Inventory System",
     category: "Full Stack",
     description: "A robust inventory management solution with real-time tracking and automated restock triggers for large-scale warehouses.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
-    result: "Node.js, GraphQL, React"
+    result: "Node.js, GraphQL, React",
+    url: "https://github.com"
   }
 ];
 
@@ -93,7 +90,12 @@ const MyWork: React.FC = () => {
             key={idx} 
             className="flex-none w-[85vw] md:w-[600px] snap-center group"
           >
-            <div className="relative aspect-[16/10] overflow-hidden rounded-3xl md:rounded-[2.5rem] border border-white/5 mb-6 md:mb-8">
+            <a 
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative aspect-[16/10] overflow-hidden rounded-3xl md:rounded-[2.5rem] border border-white/5 mb-6 md:mb-8"
+            >
               <img 
                 src={project.image} 
                 alt={project.title}
@@ -113,15 +115,20 @@ const MyWork: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
             <div className="px-2 md:px-4">
                <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-4 md:mb-6 line-clamp-2">{project.description}</p>
-               <button className="text-white font-bold text-sm md:text-base flex items-center gap-2 group-hover:gap-4 transition-all">
+               <a 
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-bold text-sm md:text-base inline-flex items-center gap-2 group-hover:gap-4 transition-all"
+               >
                   View Repository 
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
-               </button>
+               </a>
             </div>
           </div>
         ))}

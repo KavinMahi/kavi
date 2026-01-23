@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
             onClick={(e) => handleLinkClick(e, 'home')} 
             className="text-2xl font-bold tracking-tighter text-white z-[110]"
           >
-            KAVINKUMAR<span className="text-blue-500">.V</span>
+            KAVIN<span className="text-blue-500">KUMAR</span>
           </a>
           
           {/* Desktop Menu */}
@@ -74,6 +74,13 @@ const Navbar: React.FC = () => {
               className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
             >
               Work
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => handleLinkClick(e, 'contact')}
+              className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >
+              Contact
             </a>
           </div>
 
@@ -122,6 +129,13 @@ const Navbar: React.FC = () => {
         <a 
           href="#work" 
           onClick={(e) => handleLinkClick(e, 'work')}
+          className="text-3xl font-bold text-white hover:text-blue-500 transition-colors"
+        >
+          Work
+        </a>
+        <a 
+          href="#contact" 
+          onClick={(e) => handleLinkClick(e, 'contact')}
           className="text-3xl font-bold text-white hover:text-blue-500 transition-colors"
         >
           Work

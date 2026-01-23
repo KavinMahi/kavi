@@ -5,25 +5,25 @@ const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Framer Motion"],
+      skills: ["React.js", "Next.js","JavaScript" , "TypeScript", "Tailwind CSS", "Html5","Css3","Wordpress"],
       icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
       color: "from-blue-500 to-cyan-400"
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express.js", "RESTful APIs", "PostgreSQL", "MongoDB", "Firebase"],
+      skills: ["Node.js", "Express.js", "RESTful APIs", "MongoDB",],
       icon: "M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01",
       color: "from-teal-500 to-emerald-400"
     },
     {
       title: "Tools & DevOps",
-      skills: ["Git & GitHub", "Docker", "Vercel", "AWS Basics", "Figma", "Postman"],
+      skills: ["Git & GitHub", "Vercel", "Figma", "Postman"],
       icon: "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z",
       color: "from-purple-500 to-indigo-400"
     },
     {
       title: "AI & Innovation",
-      skills: ["Gemini API", "Cursor AI", "LLM Prompting", "AI Integrations", "Optimized Workflows"],
+      skills: ["Gemini AI", "Cursor AI", "Loveble AI", ],
       icon: "M13 10V3L4 14h7v7l9-11h-7z",
       color: "from-amber-500 to-orange-400"
     }

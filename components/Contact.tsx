@@ -5,15 +5,15 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       label: "Email Me",
-      value: "kavinkumar.dev@gmail.com",
-      link: "mailto:kavinkumar.dev@gmail.com",
+      value: "kavinmahi.cs@gmail.com",
+      link: "mailto:kavinmahi.cs@gmail.com",
       icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
       color: "from-blue-500 to-indigo-500"
     },
     {
       label: "Call Me",
-      value: "+91 98765 43210",
-      link: "tel:+919876543210",
+      value: "+91 7339451207",
+      link: "tel:+917339451207",
       icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
       color: "from-teal-500 to-emerald-500"
     }
@@ -63,11 +63,7 @@ const Contact: React.FC = () => {
             ))}
           </div>
           
-          <div className="mt-16 pt-8 border-t border-white/5">
-            <p className="text-slate-500 text-sm italic">
-              Available for remote work worldwide.
-            </p>
-          </div>
+          
         </div>
       </div>
     </section>
