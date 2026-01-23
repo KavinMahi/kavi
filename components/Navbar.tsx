@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled || isMenuOpen ? 'py-4 glass-effect' : 'py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <a href="#" className="text-2xl font-bold tracking-tighter text-white z-[110]">
-            ALEX<span className="text-blue-500">THOMPSON</span>
+            KAVINKUMAR<span className="text-blue-500">.V</span>
           </a>
           
           {/* Desktop Menu */}
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
             <a href="#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
             <a href="#services" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Expertise</a>
             <a href="#work" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Work</a>
-            <a href="#" className="px-6 py-2.5 rounded-full glass-effect text-sm font-semibold hover:bg-white hover:text-black transition-all">
+            <a href="#contact" className="px-6 py-2.5 rounded-full glass-effect text-sm font-semibold hover:bg-white hover:text-black transition-all">
               Get in Touch
             </a>
           </div>
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
           Work
         </a>
         <a 
-          href="#" 
+          href="#contact" 
           onClick={() => setIsMenuOpen(false)}
           className="mt-4 px-10 py-4 rounded-full accent-gradient text-xl font-bold text-white shadow-xl shadow-blue-500/20"
         >

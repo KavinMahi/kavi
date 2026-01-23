@@ -7,6 +7,7 @@ import MyWork from './components/MyWork';
 import Stats from './components/Stats';
 import About from './components/About';
 import AIAssistant from './components/AIAssistant';
+import Contact from './components/Contact';
 
 const App: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -27,13 +28,14 @@ const App: React.FC = () => {
         <Services />
         <MyWork />
         <About />
+        <Contact />
       </main>
 
       <footer className="py-12 border-t border-white/10 bg-black/50">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
-            <h2 className="text-2xl font-bold text-white mb-2">Alex Thompson<span className="text-blue-500">_</span></h2>
-            <p className="text-slate-400 text-sm">Senior Full Stack Engineer & Software Architect</p>
+            <h2 className="text-2xl font-bold text-white mb-2">Kavinkumar V<span className="text-blue-500">_</span></h2>
+            <p className="text-slate-400 text-sm">Full-Stack Web Developer</p>
           </div>
           <div className="flex gap-8 text-slate-400 text-sm">
             <a href="#" className="hover:text-white transition-colors">GitHub</a>
@@ -41,7 +43,7 @@ const App: React.FC = () => {
             <a href="#" className="hover:text-white transition-colors">Twitter</a>
             <a href="#" className="hover:text-white transition-colors">Resume</a>
           </div>
-          <p className="text-slate-500 text-xs">© 2024 Alex Thompson. Hand-coded with precision.</p>
+          <p className="text-slate-500 text-xs">© 2024 Kavinkumar V. Hand-coded with precision.</p>
         </div>
       </footer>
 

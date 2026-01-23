@@ -9,7 +9,7 @@ interface AIAssistantProps {
 
 const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Hello! I am Alex’s Technical Consultant. How can I assist you with architecture questions, stack inquiries, or technical insights today?" }
+    { role: 'assistant', content: "Hello! I am Kavinkumar's Technical Consultant. How can I assist you with web development questions, architecture inquiries, or project ideas today?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -45,7 +45,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
             </svg>
           </div>
           <div>
-            <h3 className="font-bold text-white text-sm">Alex's Tech Strategist</h3>
+            <h3 className="font-bold text-white text-sm">Kavinkumar's Tech Strategist</h3>
             <span className="text-[10px] text-teal-400 font-bold uppercase tracking-widest">Compiler Mode On</span>
           </div>
         </div>

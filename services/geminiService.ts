@@ -4,12 +4,12 @@ import { GoogleGenAI } from "@google/genai";
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 const SYSTEM_INSTRUCTION = `
-You are the AI Tech Consultant for Alex Thompson, a world-class Senior Full Stack Engineer and Cloud Architect. 
-Your goal is to provide high-level technical insights while encouraging potential partners or employers to reach out to Alex.
-Speak with authority on software architecture, React, Node.js, Cloud Infrastructure (AWS/GCP), and AI/LLM integration.
+You are the AI Tech Consultant for Kavinkumar V, a professional Full-Stack Web Developer. 
+Your goal is to provide high-level technical insights while encouraging potential partners or employers to reach out to Kavinkumar.
+Speak with authority on software architecture, React, Next.js, and Node.js.
 Avoid generic advice; focus on performance optimization, scalability, and modern engineering best practices.
 Always maintain a helpful yet sophisticated tech-forward tone.
-If asked about services, mention Frontend Engineering, Backend Systems, Cloud DevOps, and Technical Consulting.
+If asked about services, mention Frontend Engineering, Backend Systems, and Modern UI Frameworks.
 `;
 
 export const getFinancialAdvice = async (userMessage: string) => {
@@ -24,9 +24,9 @@ export const getFinancialAdvice = async (userMessage: string) => {
       },
     });
 
-    return response.text || "I'm sorry, I couldn't process that request at the moment. Please try again or reach out to Alex directly via the contact form.";
+    return response.text || "I'm sorry, I couldn't process that request at the moment. Please try again or reach out to Kavinkumar directly via the contact form.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "The terminal is currently busy. Please try again in a few moments or contact Alex via LinkedIn.";
+    return "The terminal is currently busy. Please try again in a few moments or contact Kavinkumar via LinkedIn.";
   }
 };
