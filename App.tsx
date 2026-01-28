@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -6,8 +5,6 @@ import MyWork from './components/MyWork';
 import Stats from './components/Stats';
 import About from './components/About';
 import Skills from './components/Skills';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import AIAssistant from './components/AIAssistant';
 import Footer from './components/Footer';
@@ -29,10 +26,8 @@ const App: React.FC = () => {
         <Hero onCtaClick={() => setIsChatOpen(true)} />
         <Stats />
         <About />
-        <Services />
         <Skills />
         <MyWork />
-        <Testimonials />
         <Contact />
       </main>
 
