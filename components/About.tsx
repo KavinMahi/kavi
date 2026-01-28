@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const About: React.FC = () => {
@@ -9,9 +8,9 @@ const About: React.FC = () => {
           <div className="relative inline-block w-full max-w-md group">
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-teal-500/20 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
              <img 
-              src="profile.png" 
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop" 
               alt="Kavin Kumar Avatar"
-              className="relative rounded-[2rem] md:rounded-[3rem] w-full aspect-square object-contain bg-gradient-to-b from-white/5 to-transparent border border-white/10 transition-transform duration-500 group-hover:scale-[1.02]"
+              className="relative rounded-[2rem] md:rounded-[3rem] w-full aspect-square object-cover bg-gradient-to-b from-white/5 to-transparent border border-white/10 transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
         </div>

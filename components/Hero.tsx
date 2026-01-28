@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface HeroProps {
@@ -70,9 +69,9 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl transform scale-75 animate-pulse"></div>
           <div className="relative w-full max-w-[500px] aspect-square animate-float">
             <img 
-              src="profile.png" 
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop" 
               alt="Kavinkumar V Avatar"
-              className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)]"
+              className="w-full h-full object-cover rounded-full border-4 border-white/10 drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)]"
             />
             {/* Ambient light effects around the avatar */}
             <div className="absolute top-1/4 -right-10 w-32 h-32 bg-amber-500/20 blur-3xl rounded-full"></div>
